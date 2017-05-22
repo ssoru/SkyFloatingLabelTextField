@@ -440,7 +440,7 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
      - returns: True if the title is displayed on the control, false otherwise.
      */
     open func isTitleVisible() -> Bool {
-        return hasText || hasErrorMessage || _titleVisible
+        return hasText || hasErrorMessage || _titleVisible || isEditing
     }
     
     fileprivate func updateTitleVisibility(_ animated: Bool = false, completion: ((_ completed: Bool) -> Void)? = nil) {
