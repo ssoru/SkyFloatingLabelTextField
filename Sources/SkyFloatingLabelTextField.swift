@@ -292,7 +292,7 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
     fileprivate func createTitleLabel() {
         let titleLabel = UILabel()
         titleLabel.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        titleLabel.font = .systemFont(ofSize: 13)
+        titleLabel.font = UIFont(name: "Roboto-Light", size: 15.0)
         titleLabel.alpha = 0.0
         titleLabel.textColor = titleColor
 
