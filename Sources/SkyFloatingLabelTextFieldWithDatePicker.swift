@@ -117,7 +117,7 @@ open class SkyFloatingLabelTextFieldWithDatePicker: SkyFloatingLabelTextField {
      */
     override open func textRect(forBounds bounds: CGRect) -> CGRect {
         var rect = super.textRect(forBounds: bounds)
-        rect.origin.x -= CGFloat(iconWidth + iconMarginLeft)
+        // rect.origin.x -= CGFloat(iconWidth + iconMarginLeft)
         rect.size.width -= CGFloat(iconWidth + iconMarginLeft)
         return rect
     }
