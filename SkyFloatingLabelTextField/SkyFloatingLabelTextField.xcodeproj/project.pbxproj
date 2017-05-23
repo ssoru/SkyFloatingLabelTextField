@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		55BC54241ED42B9600903F61 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BC54231ED42B9600903F61 /* SkyFloatingLabelTextFieldWithIcon.swift */; };
+		55BC54281ED43B8000903F61 /* SkyFloatingLabelTextFieldWithDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BC54271ED43B8000903F61 /* SkyFloatingLabelTextFieldWithDatePicker.swift */; };
 		934DBCFF1CC774B900E03F87 /* SkyFloatingLabelTextField.strings in Resources */ = {isa = PBXBuildFile; fileRef = 934DBD011CC774B900E03F87 /* SkyFloatingLabelTextField.strings */; };
 		934DBD021CC775D300E03F87 /* SkyFloatingLabelTextField.strings in Resources */ = {isa = PBXBuildFile; fileRef = 934DBD011CC774B900E03F87 /* SkyFloatingLabelTextField.strings */; };
 		C70C15ED1E8C433000E0673B /* SkyFloatingLabelTextFieldAppearanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C15EC1E8C433000E0673B /* SkyFloatingLabelTextFieldAppearanceTests.swift */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		55BC54231ED42B9600903F61 /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SkyFloatingLabelTextFieldWithIcon.swift; path = ../../Sources/SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
+		55BC54271ED43B8000903F61 /* SkyFloatingLabelTextFieldWithDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SkyFloatingLabelTextFieldWithDatePicker.swift; path = ../../Sources/SkyFloatingLabelTextFieldWithDatePicker.swift; sourceTree = "<group>"; };
 		934DBCFB1CC76D4600E03F87 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Main.strings; sourceTree = "<group>"; };
 		934DBCFC1CC76D4600E03F87 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		934DBD001CC774B900E03F87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/SkyFloatingLabelTextField.strings; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				F5B6E1041C8604C2003D4DB9 /* SkyFloatingLabelTextFieldWithSecureText.swift */,
 				55BC54231ED42B9600903F61 /* SkyFloatingLabelTextFieldWithIcon.swift */,
 				F5B6E1051C8604C2003D4DB9 /* UITextField+fixCaretPosition.swift */,
+				55BC54271ED43B8000903F61 /* SkyFloatingLabelTextFieldWithDatePicker.swift */,
 				F562891D1C3BE3A20082D9A6 /* Info.plist */,
 			);
 			path = SkyFloatingLabelTextField;
@@ -436,6 +439,7 @@
 				F5B6E1061C8604C2003D4DB9 /* SkyFloatingLabelTextField.swift in Sources */,
 				F5B6E1081C8604C2003D4DB9 /* SkyFloatingLabelTextFieldWithSecureText.swift in Sources */,
 				F5B6E1091C8604C2003D4DB9 /* UITextField+fixCaretPosition.swift in Sources */,
+				55BC54281ED43B8000903F61 /* SkyFloatingLabelTextFieldWithDatePicker.swift in Sources */,
 				55BC54241ED42B9600903F61 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
