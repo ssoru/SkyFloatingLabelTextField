@@ -28,7 +28,7 @@ open class SkyFloatingLabelTextFieldWithDatePicker: SkyFloatingLabelTextField {
     
     /// A float value that determines the width of the icon
     @IBInspectable
-    dynamic open var iconWidth: CGFloat = 20 {
+    dynamic open var iconWidth: CGFloat = -4 {
         didSet {
             updateFrame()
         }
@@ -117,7 +117,7 @@ open class SkyFloatingLabelTextFieldWithDatePicker: SkyFloatingLabelTextField {
      */
     override open func textRect(forBounds bounds: CGRect) -> CGRect {
         var rect = super.textRect(forBounds: bounds)
-        // rect.origin.x -= CGFloat(iconWidth + iconMarginLeft)
+        rect.origin.x -= CGFloat(iconWidth + iconMarginLeft)
         rect.size.width -= CGFloat(iconWidth + iconMarginLeft)
         return rect
     }
@@ -154,7 +154,7 @@ open class SkyFloatingLabelTextFieldWithDatePicker: SkyFloatingLabelTextField {
     fileprivate func updateFrame() {
         let textWidth: CGFloat = bounds.size.width
         iconLabel.frame = CGRect(
-            x: textWidth - iconWidth,
+            x: textWidth,
             y: bounds.size.height - textHeight() - iconMarginBottom,
             width: iconWidth,
             height: textHeight()
@@ -168,7 +168,9 @@ open class SkyFloatingLabelTextFieldWithDatePicker: SkyFloatingLabelTextField {
         
         sender.inputView = datePickerView
         
-        datePickerView.addTarget(self, action: #selector(SkyFloatingLabelTextFieldWithDatePicker.datePickerValueChanged), for: UIControlEvents.valueChanged)
+        datePickerView.addTarget(self,
+                                 action: #selector(SkyFloatingLabelTextFieldWithDatePicker.datePickerValueChanged),
+                                 for: UIControlEvents.valueChanged)
         
     }
     
