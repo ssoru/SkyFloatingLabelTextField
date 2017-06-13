@@ -20,6 +20,7 @@ open class SkyFloatingLabelTextFieldWithDatePicker: SkyFloatingLabelTextField {
     open var iconLabel: UIImageView!
     
     /// A UIFont value that determines the font that the icon is using
+    @IBInspectable
     dynamic open var icon: UIImage? {
         didSet {
             iconLabel?.image = icon
@@ -176,12 +177,11 @@ open class SkyFloatingLabelTextFieldWithDatePicker: SkyFloatingLabelTextField {
     
     func datePickerValueChanged(sender: UIDatePicker) {
         let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/YYYY"
         
-        dateFormatter.dateStyle = DateFormatter.Style.medium
+        let strDate = dateFormatter.string(from: sender.date)
         
-        dateFormatter.timeStyle = DateFormatter.Style.none
-        
-        self.text = dateFormatter.string(from: sender.date)
+        self.text = strDate
         
     }
 }
