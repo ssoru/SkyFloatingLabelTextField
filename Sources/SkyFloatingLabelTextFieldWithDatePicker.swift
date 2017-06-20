@@ -168,11 +168,11 @@ open class SkyFloatingLabelTextFieldWithDatePicker: SkyFloatingLabelTextField {
     func textFieldEditing(sender: UITextField) {
         let datePickerView:UIDatePicker = UIDatePicker()
         
-        if (minDate) {
+        if (minDate != nil) {
             datePickerView.minimumDate = minDate
         }
         
-        if (maxDate) {
+        if (maxDate != nil) {
             datePickerView.maximumDate = maxDate
         }
         
