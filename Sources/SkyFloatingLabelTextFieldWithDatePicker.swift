@@ -19,6 +19,9 @@ open class SkyFloatingLabelTextFieldWithDatePicker: SkyFloatingLabelTextField {
     /// A UILabel value that identifies the label used to display the icon
     open var iconLabel: UIImageView!
     
+    open var minDate: Date? = nil
+    open var maxDate: Date? = nil
+    
     /// A UIFont value that determines the font that the icon is using
     @IBInspectable
     dynamic open var icon: UIImage? {
@@ -164,6 +167,14 @@ open class SkyFloatingLabelTextFieldWithDatePicker: SkyFloatingLabelTextField {
     
     func textFieldEditing(sender: UITextField) {
         let datePickerView:UIDatePicker = UIDatePicker()
+        
+        if (minDate) {
+            datePickerView.minimumDate = minDate
+        }
+        
+        if (maxDate) {
+            datePickerView.maximumDate = maxDate
+        }
         
         datePickerView.datePickerMode = UIDatePickerMode.date
         
