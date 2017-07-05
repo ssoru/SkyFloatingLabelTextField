@@ -43,7 +43,7 @@ open class SkyFloatingLabelTextFieldWithDatePicker: SkyFloatingLabelTextField {
      Use this value to position the icon more precisely horizontally.
      */
     @IBInspectable
-    dynamic open var iconMarginLeft: CGFloat = 4 {
+    dynamic open var iconMarginLeft: CGFloat = 24 {
         didSet {
             updateFrame()
         }
