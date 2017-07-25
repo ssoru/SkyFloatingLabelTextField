@@ -607,4 +607,17 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
         }
         return titleFormatter(title)
     }
+    
+    override open func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool
+    {
+        if self.isKind(of: SkyFloatingLabelTextFieldWithSecureText.classForCoder())
+        {
+            UIMenuController.shared.isMenuVisible = false
+            return false
+        }
+        else
+        {
+            return true
+        }
+    }
 } // swiftlint:disable:this file_length
