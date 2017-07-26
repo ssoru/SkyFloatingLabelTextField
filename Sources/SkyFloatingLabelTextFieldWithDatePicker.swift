@@ -168,17 +168,30 @@ open class SkyFloatingLabelTextFieldWithDatePicker: SkyFloatingLabelTextField {
     func textFieldEditing(sender: UITextField) {
         let datePickerView:UIDatePicker = UIDatePicker()
         
+        var today = Date()
+        
         if (minDate != nil) {
             datePickerView.minimumDate = minDate
         }
         
         if (maxDate != nil) {
             datePickerView.maximumDate = maxDate
+            today = maxDate!
         }
         
         datePickerView.datePickerMode = UIDatePickerMode.date
         
         sender.inputView = datePickerView
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/YYYY"
+        
+        
+        let strDate = dateFormatter.string(from: today)
+        
+        if self.text == nil || self.text == "" {
+            self.text = strDate
+        }
         
         datePickerView.addTarget(self,
                                  action: #selector(SkyFloatingLabelTextFieldWithDatePicker.datePickerValueChanged),
